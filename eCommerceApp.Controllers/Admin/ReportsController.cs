@@ -6,16 +6,11 @@ using System.Text;
 namespace eCommerceApp.Controllers
 {
     [Area("Admin")]
-    public class AdminController : Controller
+    public class ReportsController : Controller
     {
         public IActionResult Index()
         {
-            return View();
-        }
-
-        public IActionResult AdminLogin()
-        {
-            return View();
+            return View("Reports");
         }
     }
 }
