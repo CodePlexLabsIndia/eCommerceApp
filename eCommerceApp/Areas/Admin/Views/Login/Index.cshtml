@@ -1,0 +1,33 @@
+﻿@model Users
+@{
+    ViewData["Title"] = "Admin Login";
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+}
+<div class="container" style="opacity:0.9;">
+    <div class="form-group bg-white w-50 p-4 mt-5 mx-auto rounded">
+        <form method="post" asp-action="Login" class="justify-content-center">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Email"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group float-right">
+                <button type="submit" class="btn btn-primary">Log in</button>
+            </div>
+            <div class="custom-checkbox">
+                <div class="checkbox">
+                    <label asp-for="RememberMe">
+                        <input asp-for="RememberMe" />
+                        @Html.DisplayNameFor(m => m.RememberMe)
+                    </label>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
